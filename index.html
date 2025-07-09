@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="MrTheGood Portfolio.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Maarten de Goede's Portfolio</title>
+
+    <script src="https://unpkg.com/clipboard@2.0.4/dist/clipboard.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            new ClipboardJS('.share-btn', {
+              text: function() {
+                return window.location.href
+              }
+            })
+          })
+    </script>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=nl">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.green-teal.min.css">
+    <style>
+        html, body {
+            font-family: 'Nunito', sans-serif;
+            margin: 0;
+            padding: 0
+        }
+        
+        /*
+         * I know what you must be thinking.. Why so many?
+         * Well, I don't know that much about css and the normal way didn't seem to work.
+         * MDL would just overwrite it. Even if I did !important or body > * + *.
+         * So, this is how I'm setting the font now.
+         */
+        html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+            font-family: 'Nunito', sans-serif
+        }
+        
+        .mdl-portfolio .section-spacer {
+            flex-grow: 1
+        }
+        
+        
+        .mdl-portfolio .project_title_row {
+            -webkit-flex-grow: 1;
+            -ms-flex-positive: 1;
+            flex-grow: 1;
+            min-height: 64px;
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+        
+        .mdl-portfolio .project_title {
+            display: flex;
+            flex-direction: column
+        }
+        
+        .mdl-portfolio .project_title strong {
+            font-size: 1.5rem;
+            font-weight: 400
+        }
+        
+        
+        
+        
+        .mdl-portfolio-ribbon {
+          width: 100%;
+          height: 24vh;
+          flex-shrink: 0;
+        }
+        
+        .mdl-portfolio-main {
+          margin-top: -35vh;
+          flex-shrink: 0;
+        }
+        
+        .mdl-portfolio-header .mdl-layout__header-row {
+          padding-left: 40px;
+        }
+        
+        .mdl-portfolio-container {
+          max-width: 1600px;
+          width: calc(100% - 16px);
+          margin: 0 auto;
+        }
+        
+        .mdl-portfolio-content {
+          border-radius: 2px;
+          padding: 80px 56px;
+          margin-top: 240px;
+          margin-bottom: 80px;
+        }
+        
+        .mdl-portfolio-layout.is-small-screen .mdl-portfolio-content {
+          padding: 40px 28px;
+        }
+        
+        .mdl-portfolio-content h3 {
+          margin-top: 48px;
+        }
+        
+        .mdl-portfolio-footer {
+          padding-left: 40px;
+          width: 100%;
+          bottom: 0;
+          position: absolute;
+        }
+        
+        .mdl-portfolio-footer .mdl-mini-footer--link-list a {
+          font-size: 13px;
+        }
+    </style>
+</head>
+
+<body class="mdl-portfolio mdl-color--grey-100 mdl-color-text--grey-900 mdl-base">
+    <div class="mdl-portfolio-layout mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-portfolio-header mdl-layout__header mdl-layout__header--scroll">
+            <div class="mdl-layout--large-screen-only mdl-layout__header-row"></div>
+            <div class="mdl-layout__header-row">
+                <h3>Maarten de Goede</h3>
+            </div>
+        </header>
+        <div class="mdl-portfolio-ribbon mdl-color--primary-dark"></div>
+        <main class="mdl-portfolio-main mdl-layout__content">
+            <div class="mdl-portfolio-container mdl-grid">
+                <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+                <div class="mdl-portfolio-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
+                    <div class="project_title_row">
+                        <div class="project_title">
+                            <strong>About Me</strong>
+                            <span>Professional Nerd</span>
+                        </div>
+                        <div class="section-spacer"></div>
+                        <button class="share-btn mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+                        <i class="material-icons">share</i>
+                    </button>
+                    </div>
+
+                    <h3>Hi there!</h3>
+                    <p>
+                        Welcome to my little space. I'm Maarten, and I'll be your host this evening. What I do for a living? Well, I make apps. Specifically with Kotlin Multiplatfrom and Compose.
+                        <br/> This site's a quick placeholder while I work on something a little more polished.
+                    </p>
+                    <p>
+                        Until then, you can check out my links below.
+                    </p>
+                    <p>
+                        Thanks for dropping by!
+                    </p>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="mdl-portfolio-footer mdl-mini-footer">
+                <div class="mdl-mini-footer--bottom-section">
+                    <div class="mdl-logo">My Links:</div>
+                    <ul class="mdl-mini-footer--link-list">
+                        <li><a href="https://github.com/MrTheGood/">Github</a></li>
+                        <li><a href="https://www.linkedin.com/in/mrthegood/">LinkedIn</a></li>
+                        <li><a href="https://media.insertcode.eu/cv">CV</a></li>
+                        <li><a href="https://androiddev.social/@mrthegood">Mastodon</a></li>
+                        <li><a href="https://play.google.com/store/apps/details?id=eu.insertcode.clapp">Clapp</a></li>
+                    </ul>
+                </div>
+            </footer>
+        </main>
+    </div>
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+</body>
+
+</html>

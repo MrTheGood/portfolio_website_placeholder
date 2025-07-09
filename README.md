@@ -1,2 +1,0 @@
-# portfolio_website_placeholder
-Temporary portfolio placeholder
